@@ -12,6 +12,7 @@ services:
     mem_limit: 1g
     volumes:
       - ./.data:/usr/share/elasticsearch/data
+      - ./.logs:/usr/share/elasticsearch/logs
     ports:
       - 127.0.0.1:9200:9200
     networks:
