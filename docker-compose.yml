@@ -16,6 +16,7 @@ services:
       - ./.logs:/usr/share/elasticsearch/logs
     ports:
       - "127.0.0.1:9200:9200"
+    restart: always
     networks:
       - esnet
 
@@ -25,6 +26,7 @@ services:
       - "xpack.security.enabled=false"
     ports:
       - "127.0.0.1:5601:5601"
+    restart: always
     networks:
       - esnet
 
